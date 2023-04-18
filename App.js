@@ -11,7 +11,7 @@ import { StatusBar } from 'react-native';
 
 import HomeScreen from './src/screens/HomeScreen';
 import SearchResults from './src/screens/SearchResults';
-// import DestinationSearch from './src/screens/DestinationSearch';
+import DestinationSearch from './src/screens/DestinationSearch';
 
 const initLocation = {
   latitude: 23.7276,
@@ -26,7 +26,7 @@ const destination = {
 const App: () => React$Node = () => {
   return (
     <React.Fragment>
-    <HomeScreen initLocation={initLocation} />
+      <DestinationSearch />
       <StatusBar barStyle="dark-content" />
     </React.Fragment>
   );

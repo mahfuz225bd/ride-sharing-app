@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import React, { useState, useEffect } from 'react';
 import { View, SafeAreaView } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
@@ -52,16 +51,5 @@ const DestinationSearch = () => {
     </SafeAreaView>
   );
 };
-
-// DestinationSearch.propTypes = {
-//   destination: PropTypes.shape({
-//     longitude: PropTypes.number.isRequired,
-//     latitude: PropTypes.number.isRequired
-//   }).isRequired,
-//   origin: PropTypes.shape({
-//     longitude: PropTypes.number.isRequired,
-//     latitude: PropTypes.number.isRequired
-//   }).isRequired
-// }
 
 export default DestinationSearch;
