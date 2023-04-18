@@ -26,8 +26,8 @@ const HomeScreen = ({ initLocation }) => {
 
 HomeScreen.propTypes = {
   initLocation: PropTypes.shape({
-    longitude: PropTypes.number.isRequired,
-    latitude: PropTypes.number.isRequired
+    latitude: PropTypes.number.isRequired,
+    longitude: PropTypes.number.isRequired
   }).isRequired
 }
 

@@ -9,7 +9,7 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 
-// import HomeScreen from './src/screens/HomeScreen';
+import HomeScreen from './src/screens/HomeScreen';
 import SearchResults from './src/screens/SearchResults';
 // import DestinationSearch from './src/screens/DestinationSearch';
 
@@ -18,8 +18,6 @@ const initLocation = {
   longitude: 90.4106,
 };
 
-const origin = initLocation;
-
 const destination = {
   latitude: 23.7591,
   longitude: 90.3996,
@@ -27,11 +25,14 @@ const destination = {
 
 const App: () => React$Node = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
+    <React.Fragment>
       <HomeScreen initLocation={initLocation} />
-    </>
+      <StatusBar barStyle="dark-content" />
+    </React.Fragment>
   );
 };
+
+// <HomeScreen initLocation={initLocation} />
+// <SearchResults origin={initLocation} destination={destination} />
 
 export default App;
