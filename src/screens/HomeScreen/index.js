@@ -6,7 +6,7 @@ import HomeMap from '../../components/HomeMap';
 import CovidMessage from '../../components/CovidMessage';
 import HomeSearch from '../../components/HomeSearch';
 
-import cars from '../../assets/data/cars';
+import cars from '../../assets/data/vehicles';
 
 const HomeScreen = ({ initLocation }) => {
   return (

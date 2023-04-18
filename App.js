@@ -26,7 +26,7 @@ const destination = {
 const App: () => React$Node = () => {
   return (
     <React.Fragment>
-      <HomeScreen initLocation={initLocation} />
+    <HomeScreen initLocation={initLocation} />
       <StatusBar barStyle="dark-content" />
     </React.Fragment>
   );
