@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import React from "react";
 import { View, Dimensions } from "react-native";
 
@@ -6,13 +5,11 @@ import HomeMap from '../../components/HomeMap';
 import CovidMessage from '../../components/CovidMessage';
 import HomeSearch from '../../components/HomeSearch';
 
-import cars from '../../assets/data/vehicles';
-
-const HomeScreen = ({ initLocation }) => {
+const HomeScreen = (props) => {
   return (
     <View>
-      <View style={{ height: Dimensions.get('window').height - 400 }}>
-        <HomeMap cars={cars} initLocation={initLocation} />
+      <View style={{height: Dimensions.get('window').height - 400}}>
+        <HomeMap />
       </View>
 
       {/*  Covid Message*/}
@@ -23,12 +20,5 @@ const HomeScreen = ({ initLocation }) => {
     </View>
   );
 };
-
-HomeScreen.propTypes = {
-  initLocation: PropTypes.shape({
-    latitude: PropTypes.number.isRequired,
-    longitude: PropTypes.number.isRequired
-  }).isRequired
-}
 
 export default HomeScreen;

@@ -5,34 +5,57 @@
  * @format
  * @flow strict-local
  */
+import 'react-native-gesture-handler';
 
-import React from 'react';
-import { StatusBar } from 'react-native';
+import React, { useEffect } from 'react';
+import { StatusBar, PermissionsAndroid, Platform } from 'react-native';
+import Geolocation from '@react-native-community/geolocation';
 
-import HomeScreen from './src/screens/HomeScreen';
-import SearchResults from './src/screens/SearchResults';
-import DestinationSearch from './src/screens/DestinationSearch';
+import Router from './src/navigation/Root';
 
-const initLocation = {
-  latitude: 23.7276,
-  longitude: 90.4106,
-};
-
-const destination = {
-  latitude: 23.7591,
-  longitude: 90.3996,
-};
+navigator.geolocation = require('@react-native-community/geolocation');
 
 const App: () => React$Node = () => {
+
+  const androidPermission = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: "Uber App Camera Permission",
+          message:
+            "Uber App needs access to your location " +
+            "so you can take awesome rides.",
+          buttonNeutral: "Ask Me Later",
+          buttonNegative: "Cancel",
+          buttonPositive: "OK"
+        }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log("You can use the location");
+      } else {
+        console.log("Location permission denied");
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+  }
+
+  useEffect(() => {
+    if (Platform.OS === 'android') {
+      androidPermission();
+    } else {
+      // IOS
+      Geolocation.requestAuthorization();
+    }
+  }, [])
+
   return (
-    <React.Fragment>
-      <DestinationSearch />
+    <>
       <StatusBar barStyle="dark-content" />
-    </React.Fragment>
+      <Router />
+    </>
   );
 };
-
-// <HomeScreen initLocation={initLocation} />
-// <SearchResults origin={initLocation} destination={destination} />
 
 export default App;
