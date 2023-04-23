@@ -7,12 +7,12 @@ import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 const HomeMap = ({ cars, initLocation }) => {
     const getImage = (type) => {
         if (type === 'Type A') {
-            return require('../../assets/images/top-TypeA.png');
+            return require('../../../assets/images/top-TypeA.png');
         }
         if (type === 'Type B') {
-            return require('../../assets/images/top-TypeB.png');
+            return require('../../../assets/images/top-TypeB.png');
         }
-        return require('../../assets/images/top-TypeC.png');
+        return require('../../../assets/images/top-TypeC.png');
     };
 
     return (

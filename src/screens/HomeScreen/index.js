@@ -2,16 +2,16 @@ import PropTypes from "prop-types"
 import React from "react";
 import { View, Dimensions } from "react-native";
 
-import HomeMap from '../../components/HomeMap';
-import CovidMessage from '../../components/CovidMessage';
-import HomeSearch from '../../components/HomeSearch';
+import HomeMap from '../../components/HomeScreen/HomeMap';
+import CovidMessage from '../../components/HomeScreen/CovidMessage';
+import HomeSearch from '../../components/HomeScreen/HomeSearch';
 
 import cars from '../../assets/data/vehicles';
 
 const HomeScreen = ({ initLocation }) => {
     return (
         <View>
-            <View style={{ height: Dimensions.get('window').height - 400 }}>
+            <View style={{ height: Dimensions.get('window').height - 375 }}>
                 <HomeMap cars={cars} initLocation={initLocation} />
             </View>
 
