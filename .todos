@@ -1,8 +1,0 @@
-Optional Todos:
-
-- rechecking backgroundColor while color:'#ffffff' for .iconContainer (Spin Work) of HomeScreen
-- rechecking backgroundColor while color:'#ffffff' for .iconContainer (Spin Home) of HomeScreen
-- rechecking backgroundColor and color for .inputText of HomeScreen
-- rechecking backgroundColor and color (color of icon component) for .timeContainer of HomeScreen
-
-Important Todos:
