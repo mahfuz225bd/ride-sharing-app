@@ -20,15 +20,15 @@ const SearchResults = ({ origin, destination }) => {
   );
 };
 
-// SearchResults.propTypes = {
-//   destination: PropTypes.shape({
-//     longitude: PropTypes.number.isRequired,
-//     latitude: PropTypes.number.isRequired
-//   }).isRequired,
-//   origin: PropTypes.shape({
-//     longitude: PropTypes.number.isRequired,
-//     latitude: PropTypes.number.isRequired
-//   }).isRequired
-// }
+SearchResults.propTypes = {
+  destination: PropTypes.shape({
+    longitude: PropTypes.number.isRequired,
+    latitude: PropTypes.number.isRequired
+  }).isRequired,
+  origin: PropTypes.shape({
+    longitude: PropTypes.number.isRequired,
+    latitude: PropTypes.number.isRequired
+  }).isRequired
+}
 
 export default SearchResults;
