@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -17,9 +18,9 @@ const workPlace = {
   geometry: { location: { lat: 23.7591, lng: 90.3996 } },
 };
 
-const DestinationSearch = () => {
-  const [originPlace, setOriginPlace] = useState(null);
-  const [destinationPlace, setDestinationPlace] = useState(null);
+const DestinationSearch = ({ origin, destination }) => {
+  const [originPlace, setOriginPlace] = useState(origin);
+  const [destinationPlace, setDestinationPlace] = useState(destination);
 
   return (
     <SafeAreaView>
@@ -86,5 +87,16 @@ const DestinationSearch = () => {
     </SafeAreaView>
   );
 };
+
+DestinationSearch.propTypes = {
+  destination: PropTypes.shape({
+    longitude: PropTypes.number.isRequired,
+    latitude: PropTypes.number.isRequired
+  }).isRequired,
+  origin: PropTypes.shape({
+    longitude: PropTypes.number.isRequired,
+    latitude: PropTypes.number.isRequired
+  }).isRequired
+}
 
 export default DestinationSearch;

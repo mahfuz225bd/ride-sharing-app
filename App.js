@@ -21,7 +21,7 @@ const destination = {
 const App = () => {
   return (
     <View>
-    <SearchResults origin={initLocation} destination={destination} />
+      <SearchResults origin={initLocation} destination={destination} />
       <StatusBar style='dark' />
     </View>
   );
@@ -29,5 +29,6 @@ const App = () => {
 
 // <HomeScreen initLocation={initLocation} />
 // <SearchResults origin={initLocation} destination={destination} />
+// <DestinationSearch />
 
 export default App;
