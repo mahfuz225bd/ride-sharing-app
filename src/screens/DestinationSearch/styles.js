@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
   listView: {
     position: 'absolute',
-      top: 105,
+    top: 108,
   },
   autocompleteContainer: {
     position: 'absolute',
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 10,
+    paddingLeft: 5
   },
   iconContainer: {
     backgroundColor: '#a2a2a2',
