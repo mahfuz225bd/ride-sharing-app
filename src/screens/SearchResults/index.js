@@ -9,11 +9,11 @@ const SearchResults = ({ origin, destination }) => {
 
   return (
     <View style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <View style={{ height: Dimensions.get('window').height - 400 }}>
-        <RouteMap origin={originPlace} destination={destinationPlace} />
+      <View style={{ height: Dimensions.get('window').height - 355 }}>
+        <RouteMap origin={origin} destination={destination} />
       </View>
 
-      <View style={{ height: 400 }}>
+      <View>
         <VehicleTypes />
       </View>
     </View>
