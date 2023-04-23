@@ -7,3 +7,7 @@ Optional Todos:
 - rechecking backgroundColor for .textInput of DestinationSearch
 
 Important Todos:
+
+- Destination Search:
+  - Enable predefinedPlaces for Where to?
+  - After selection of a predefinedPlace of Where from? or Where to?, hide predefinedPlace from list to prevent set place to other input box
