@@ -1,27 +1,33 @@
+import PropTypes from "prop-types"
 import React from 'react';
-import {View, Dimensions} from 'react-native';
+import { View, Dimensions } from 'react-native';
+
 import RouteMap from "../../components/RouteMap";
-import UberTypes from "../../components/VehicleTypes";
+import VehicleTypes from "../../components/VehicleTypes";
 
-import { useRoute } from '@react-navigation/native';
-
-const SearchResults = (props) => {
-  const route = useRoute();
-
-  console.log(route.params);
-  const {originPlace, destinationPlace} = route.params
-
+const SearchResults = ({ origin, destination }) => {
   return (
-    <View style={{display: 'flex', justifyContent: 'space-between'}}>
-      <View style={{height: Dimensions.get('window').height - 400}}>
-        <RouteMap origin={originPlace} destination={destinationPlace} />
+    <View style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <View style={{ height: Dimensions.get('window').height - 400 }}>
+        <RouteMap origin={origin} destination={destination} />
       </View>
 
-      <View style={{height: 400}}>
-        <UberTypes />
+      <View style={{ height: 400 }}>
+        <VehicleTypes />
       </View>
     </View>
   );
 };
+
+SearchResults.propTypes = {
+  destination: PropTypes.shape({
+    longitude: PropTypes.number.isRequired,
+    latitude: PropTypes.number.isRequired
+  }).isRequired,
+  origin: PropTypes.shape({
+    longitude: PropTypes.number.isRequired,
+    latitude: PropTypes.number.isRequired
+  }).isRequired
+}
 
 export default SearchResults;
