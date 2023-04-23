@@ -19,6 +19,7 @@ const HomeSearch = () => {
             </View>
 
             {/* Previous destination */}
+            {/* Work destination */}
             <View style={styles.row}>
                 <View style={styles.iconContainer}>
                     <MaterialIcons name={'work'} size={20} color={'#ffffff'} />

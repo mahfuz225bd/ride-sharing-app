@@ -2,7 +2,10 @@ import React from 'react';
 import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
+navigator.geolocation = require('react-native-geolocation-service');
+
 import HomeScreen from './src/screens/HomeScreen';
+import DestinationSearch from './src/screens/DestinationSearch';
 import SearchResults from './src/screens/SearchResults';
 
 const initLocation = {
@@ -18,12 +21,13 @@ const destination = {
 const App = () => {
   return (
     <View>
-      <HomeScreen initLocation={initLocation} />
+      <DestinationSearch />
       <StatusBar style='dark' />
     </View>
   );
 }
 
+// <HomeScreen initLocation={initLocation} />
 // <SearchResults origin={initLocation} destination={destination} />
 
 export default App;
