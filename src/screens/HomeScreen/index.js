@@ -11,7 +11,7 @@ import cars from '../../assets/data/vehicles';
 const HomeScreen = ({ initLocation }) => {
     return (
         <View>
-            <View style={{ height: Dimensions.get('window').height - 375 }}>
+            <View style={{ height: Dimensions.get('window').height - 404 }}>
                 <HomeMap cars={cars} initLocation={initLocation} />
             </View>
 

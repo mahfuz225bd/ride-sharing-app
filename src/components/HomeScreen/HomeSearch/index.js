@@ -19,9 +19,16 @@ const HomeSearch = () => {
             </View>
 
             {/* Previous destination */}
+            <View style={styles.row}>
+                <View style={[styles.iconContainer, { backgroundColor: '#ABABAB' }]}>
+                    <AntDesign name={'clockcircle'} size={20} color={'#ffffff'} />
+                </View>
+                <Text style={styles.destinationText}>Spin Previous Location</Text>
+            </View>
+
             {/* Work destination */}
             <View style={styles.row}>
-                <View style={styles.iconContainer}>
+                <View style={[styles.iconContainer, { backgroundColor: '#0071FA' }]}>
                     <MaterialIcons name={'work'} size={20} color={'#ffffff'} />
                 </View>
                 <Text style={styles.destinationText}>Spin Work</Text>

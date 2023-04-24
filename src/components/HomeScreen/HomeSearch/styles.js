@@ -3,7 +3,9 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     inputBox: {
         backgroundColor: '#eee',
-        margin: 10,
+        marginHorizontal: 10,
+        marginTop: 10,
+        marginBottom: 0,
         padding: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -26,12 +28,12 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         alignItems: 'center',
-        padding: 20,
+        paddingHorizontal: 20,
+        paddingVertical: 13,
         borderBottomWidth: 1,
         borderColor: '#dbdbdb',
     },
     iconContainer: {
-        backgroundColor: '#ABABAB',
         padding: 10,
         borderRadius: 25,
     },
