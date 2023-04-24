@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
   listView: {
     position: 'absolute',
-    top: 108,
+    top: 109,
   },
   autocompleteContainer: {
     position: 'absolute',

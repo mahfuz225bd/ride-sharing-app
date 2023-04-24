@@ -21,7 +21,7 @@ const destination = {
 const App = () => {
   return (
     <View>
-    <HomeScreen initLocation={initLocation} />
+    <DestinationSearch />
       <StatusBar style='dark' />
     </View>
   );

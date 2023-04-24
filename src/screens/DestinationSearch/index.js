@@ -58,12 +58,15 @@ const DestinationSearch = ({ origin, destination }) => {
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
+          currentLocation={true}
+          currentLocationLabel='Current location'
           styles={{
             textInput: styles.textInput,
             container: {
               ...styles.autocompleteContainer,
               top: 55,
             },
+            listView: {...styles.listView, top: 54},
             separator: styles.separator,
           }}
           fetchDetails
@@ -72,6 +75,8 @@ const DestinationSearch = ({ origin, destination }) => {
             language: 'en',
           }}
           renderRow={(data) => <PlaceRow data={data} />}
+          renderDescription={(data) => data.description || data.vicinity}
+          predefinedPlaces={[homePlace, workPlace]}
         />
 
         {/* Circle near Origin input */}
