@@ -1,12 +1,16 @@
-Optional Todos:
-
-- rechecking backgroundColor while color:'#ffffff' for .iconContainer (Spin Work) of HomeScreen
-- rechecking backgroundColor while color:'#ffffff' for .iconContainer (Spin Home) of HomeScreen
-- rechecking backgroundColor and color for .inputText of HomeScreen
-- rechecking backgroundColor and color (color of icon component) for .timeContainer of HomeScreen
-- rechecking backgroundColor for .textInput of DestinationSearch
-
 Important Todos:
 
 - Destination Search:
   - After selection of a predefinedPlace of Where from? or Where to?, hide predefinedPlace from list to prevent set place to other input box
+  
+- Make country limitation for screen: DestinationSearch > GooglePlacesAutocomplete
+- Make country limitation for google map of screen: HomeScreen > HomeMap
+- Make country limitation for google map of screen: SearchResults > RouteMap
+
+Optional Todos:
+
+- Recheck backgroundColor while color:'#ffffff' for .iconContainer (Spin Work) of HomeScreen
+- Recheck backgroundColor while color:'#ffffff' for .iconContainer (Spin Home) of HomeScreen
+- Recheck backgroundColor and color for .inputText of HomeScreen
+- Recheck backgroundColor and color (color of icon component) for .timeContainer of HomeScreen
+- Recheck backgroundColor for .textInput of DestinationSearch 

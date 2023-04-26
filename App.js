@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 
 navigator.geolocation = require('react-native-geolocation-service');
@@ -20,10 +20,10 @@ const destination = {
 
 const App = () => {
   return (
-    <View>
-    <DestinationSearch />
+    <SafeAreaProvider>
+    <SearchResults origin={initLocation} destination={destination} />
       <StatusBar style='dark' />
-    </View>
+    </SafeAreaProvider>
   );
 }
 

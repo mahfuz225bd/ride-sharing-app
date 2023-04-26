@@ -14,7 +14,7 @@ const VehicleTypes = () => {
   return (
     <View>
       {typesData.map((each) => (
-        <VehicleTypeRow key={each.id} type={each.type} price={each.price} />
+        <VehicleTypeRow key={each.id} type={each.type} price={each.price} hasPromo={each.hasPromo} />
       ))}
 
       <Pressable onPress={confirm} style={{
